@@ -35,14 +35,14 @@ dependencies {
     implementation("io.ktor:ktor-client-cio:$ktorVersion")
 
     // kotest
-    testImplementation("io.kotest:kotest-runner-junit5:$kotestVersion")
-    testImplementation("io.kotest:kotest-assertions-core:$kotestVersion")
-    testImplementation("io.kotest:kotest-property:$kotestVersion")
+    implementation("io.kotest:kotest-runner-junit5:$kotestVersion")
+    implementation("io.kotest:kotest-assertions-core:$kotestVersion")
+    implementation("io.kotest:kotest-property:$kotestVersion")
     // versioned independently of the main kotest project
-    testImplementation("io.kotest.extensions:kotest-assertions-arrow:1.4.0")
+    implementation("io.kotest.extensions:kotest-assertions-arrow:1.4.0")
     // test lib for ktor
-    testImplementation("io.ktor:ktor-server-test-host:2.3.12")
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher")
+    implementation("io.ktor:ktor-server-test-host:2.3.12")
+    runtimeOnly("org.junit.platform:junit-platform-launcher")
 }
 
 tasks.test {
